@@ -99,7 +99,7 @@ export function NFTCollection({ contractAddress }: NFTCollectionProps) {
           </tr>
         </thead>
         <tbody>
-        {nft.metadata?.attributes?.map((attribute: { trait_type: string; value: string }): JSX.Element => (
+        {(nft.metadata?.attributes as any)?.map((attribute: { trait_type: string; value: string }): JSX.Element => (
           <tr>
             <td>{attribute.trait_type}</td>
             <td>{attribute.value}</td>
